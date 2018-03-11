@@ -17,7 +17,8 @@ class App extends React.Component{
 				}
 			]
 		}
-		this.handler = this.handler.bind(this)
+		this.handler = this.handler.bind(this);
+		this.check = this.check.bind(this);
 	}
 
 	handler(data){
@@ -31,6 +32,15 @@ class App extends React.Component{
 		});
 	}
 
+	check(data){
+		let id = data.target.parentNode.parentNode.parentNode.getAttribute('data-id');
+		let t = this.state.tasks;
+		t[id].completed = ! t[id].completed;
+		this.setState({
+			tasks: t
+		});
+	}
+
 	render(){
 		return (
 			<section className="section main">
@@ -40,8 +50,13 @@ class App extends React.Component{
 					</div>
 				</div>
 				<div className="box">
-					<NewTask handler = { this.handler } />
-					<Tasks items = { this.state.tasks } />
+					<NewTask 
+						handler = { this.handler } 
+					/>
+					<Tasks 
+						items = { this.state.tasks }
+						check = { this.check }
+					/>
 				</div>
 			</section>
 		);
