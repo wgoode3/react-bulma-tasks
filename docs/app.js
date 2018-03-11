@@ -34,8 +34,15 @@ class App extends React.Component{
 	render(){
 		return (
 			<section className="section">
-				<Tasks items={this.state.tasks}/>
-				<NewTask handler={this.handler} />
+				<div className="hero is-primary">
+					<div className="hero-body is-bold">
+						<h1 className="title">Tasks</h1>
+					</div>
+				</div>
+				<div className="box">
+					<NewTask handler = { this.handler } />
+					<Tasks items = { this.state.tasks } />
+				</div>
 			</section>
 		);
 	}
