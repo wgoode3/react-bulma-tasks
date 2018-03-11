@@ -33,7 +33,7 @@ class App extends React.Component{
 
 	render(){
 		return (
-			<section className="section">
+			<section className="section main">
 				<div className="hero is-primary">
 					<div className="hero-body is-bold">
 						<h1 className="title">Tasks</h1>
