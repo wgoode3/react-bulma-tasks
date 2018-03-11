@@ -33,6 +33,7 @@ class App extends React.Component{
 	}
 
 	check(data){
+		console.log(this.state.tasks);
 		let id = data.target.parentNode.parentNode.parentNode.getAttribute('data-id');
 		let t = this.state.tasks;
 		t[id].completed = ! t[id].completed;

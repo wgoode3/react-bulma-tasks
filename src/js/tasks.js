@@ -13,10 +13,10 @@ class Tasks extends React.Component {
 	thing(e){
 		let f = e.target.text;
 		this.filter(f);
-		e.target.parentNode.childNodes.forEach((node) => {
+		e.target.parentNode.parentNode.childNodes.forEach((node) => {
 			node.classList.remove("is-active");
 		});
-		e.target.classList.add("is-active");
+		e.target.parentNode.classList.add("is-active");
 	}
 
 	filter(f){
@@ -39,12 +39,18 @@ class Tasks extends React.Component {
 	render(){
 		return (	
 			<div>
-				<div className="panel">
-					<p className="panel-tabs">
-						<a className="is-active" onClick={this.thing}>all</a>
-						<a onClick={this.thing}>completed</a>
-						<a onClick={this.thing}>active</a>
-					</p>
+				<div className="tabs is-centered is-boxed">
+					<ul>
+						<li className="is-active">
+							<a onClick={this.thing}>all</a>
+						</li>
+						<li>
+							<a onClick={this.thing}>completed</a>
+						</li>
+						<li>
+							<a onClick={this.thing}>active</a>
+						</li>
+					</ul>
 				</div>
 				<table className="table is-fullwidth is-hoverable is-striped">
 					<thead>

@@ -1,7 +1,3 @@
-.panel-tabs {
-	border: none !important;
-}
-
 .main {
 	width: 800px;
 	margin: 0 auto;
@@ -10,6 +6,10 @@
 .hero {
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px; 
+}
+
+.tabs {
+	margin-top: 10px;
 }
 
 .box {
