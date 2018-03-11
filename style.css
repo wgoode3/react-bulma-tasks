@@ -6,3 +6,13 @@
 	width: 800px;
 	margin: 0 auto;
 }
+
+.hero {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px; 
+}
+
+.box {
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px; 
+}
